@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      class="rounded-md"
+      href="assets/vani-logo-192.png"
+      type="image/x-icon"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vani Marketplace</title>
+
+    <!-- Translation Script -->
+    <script>
+      const translations = {
+        fr: {
+          // Navigation & UI
+          vani: "Vani",
+          home: "Accueil",
+          product: "Produit",
+          about: "À Propos",
+          contact: "Contact",
+          start: "Commencer",
+          langLabel: "🇫🇷 FR",
+          langFr: "🇫🇷 Français",
+          langEn: "🇬🇧 Anglais",
+
+          // Hero Section
+          future: "L'Avenir du Commerce à Kinshasa",
+          headline: "Transformez Vos Objets en Valeur Réelle",
+          subheadline:
+            "VANI est une marketplace e-commerce de confiance où particuliers et entreprises vendent des produits neufs et d'occasion en toute sérénité. Vérification rigoureuse. Livraison fiable. Opportunité réelle.",
+          explore: "Explorer la Marketplace",
+          learn: "En Savoir Plus",
+          verified: "99% Verified",
+          delivery: "Managed Delivery",
+          quality: "Quality Guaranteed",
+          qualityChecked: "Quality Checked",
+
+          // Why Choose VANI Section
+          whyTitle: "Pourquoi Choisir VANI",
+          whySubtitle:
+            "Nous avons créé une marketplace qui privilégie la confiance, la qualité et l'accessibilité pour tous à Kinshasa.",
+          sellAnything: "Vendez Tout",
+          sellDesc:
+            "Transformez les objets dont vous n'avez plus besoin en revenus réels. Que ce soient des produits neufs ou des articles d'occasion de qualité, VANI vous offre une plateforme de confiance pour atteindre des acheteurs sérieux à Kinshasa.",
+          buyConfidence: "Achetez en Confiance",
+          buyDesc:
+            "Chaque produit listé sur VANI fait l'objet d'une vérification stricte. Notre taux d'inspection de 99% garantit que vous recevez exactement ce que vous avez commandé, dans l'état promis.",
+          verifiedQuality: "Qualité Vérifiée",
+          qualityDesc:
+            "Notre équipe dédiée au contrôle qualité inspecte presque chaque article avant livraison. Nous vérifions l'état, l'authenticité et la conformité pour protéger acheteurs et vendeurs.",
+          reliableDelivery: "Livraison Fiable",
+          deliveryDesc:
+            "La livraison gérée par Vani garantit que vos colis arrivent en toute sécurité et à temps. Manipulation professionnelle, suivi en temps réel et responsabilité à chaque étape.",
+
+          // Trust Section
+          trustTitle: "Fondé sur la Confiance",
+          trustSubtitle:
+            "Dans un marché où la confiance peut être difficile à trouver, VANI établit une nouvelle norme pour le commerce en ligne fiable.",
+          trustDesc:
+            "Chaque transaction sur VANI est protégée par notre processus de vérification complet. Nous croyons que la confiance se mérite par des actions constantes—c'est pourquoi nous vérifions personnellement les produits, gérons les livraisons et garantissons chaque achat. Actuellement disponible à Kinshasa, avec l'ambition de s'étendre à tout le pays.",
+          verificationRate: "Taux de Vérification",
+          managedDelivery: "Livraison Gérée",
+          customerSupport: "Support Client",
+
+          // How It Works Section
+          howTitle: "Comment Fonctionne VANI",
+          howSubtitle:
+            "Un processus simple et sécurisé conçu pour le marché de Kinshasa.",
+          step1Title: "Publiez Votre Produit",
+          step1Desc:
+            "Créez une annonce détaillée avec photos et description. Fixez votre prix et atteignez des milliers d'acheteurs potentiels.",
+          step2Title: "Nous Vérifions Tout",
+          step2Desc:
+            "Notre équipe qualité examine les annonces et inspecte les produits pour s'assurer que la précision et l'état correspondent à nos standards.",
+          step3Title: "Transaction Sécurisée",
+          step3Desc:
+            "Les acheteurs paient via notre plateforme sécurisée. Les fonds sont conservés en sécurité jusqu'à confirmation de la livraison.",
+          step4Title: "Livraison Gérée",
+          step4Desc:
+            "Notre équipe de livraison professionnelle gère la collecte et la livraison avec soin, garantissant que les articles arrivent en parfait état.",
+
+          // CTA Section
+          ctaTitle: "Prêt à Commencer ?",
+          ctaSubtitle:
+            "Rejoignez des milliers d'acheteurs et vendeurs qui utilisent déjà VANI pour libérer la valeur des objets du quotidien.",
+          ctaButton: "Accéder à la Marketplace",
+          contactTeam: "Contacter Notre Équipe",
+
+          // Footer
+          footerTagline: "Construire un commerce de confiance pour Kinshasa.",
+          footerDesc:
+            "Vani est une entreprise technologique créant l'infrastructure pour un e-commerce fiable et vérifié en République Démocratique du Congo.",
+          navigation: "Navigation",
+          legal: "Légal",
+          privacy: "Politique de Confidentialité",
+          terms: "Conditions d'Utilisation",
+          copyright: "© 2026 Vani. Tous droits réservés.",
+        },
+        en: {
+          // Navigation & UI
+          vani: "Vani",
+          home: "Home",
+          product: "Product",
+          about: "About",
+          contact: "Contact",
+          start: "Get Started",
+          langLabel: "🇬🇧 EN",
+          langFr: "🇫🇷 French",
+          langEn: "🇬🇧 English",
+
+          // Hero Section
+          future: "The Future of Commerce in Kinshasa",
+          headline: "Turn Your Items Into Real Value",
+          subheadline:
+            "VANI is a trusted e-commerce marketplace where individuals and businesses sell new and used products with complete peace of mind. Rigorous verification. Reliable delivery. Real opportunity.",
+          explore: "Explore the Marketplace",
+          learn: "Learn More",
+          verified: "99% Verified",
+          delivery: "Managed Delivery",
+          quality: "Quality Guaranteed",
+          qualityChecked: "Quality Checked",
+
+          // Why Choose VANI Section
+          whyTitle: "Why Choose VANI",
+          whySubtitle:
+            "We created a marketplace that prioritizes trust, quality, and accessibility for everyone in Kinshasa.",
+          sellAnything: "Sell Anything",
+          sellDesc:
+            "Turn items you no longer need into real income. Whether new products or quality used goods, VANI offers you a trusted platform to reach serious buyers in Kinshasa.",
+          buyConfidence: "Buy With Confidence",
+          buyDesc:
+            "Every product listed on VANI undergoes strict verification. Our 99% inspection rate ensures you get exactly what you ordered, in the promised condition.",
+          verifiedQuality: "Verified Quality",
+          qualityDesc:
+            "Our dedicated quality control team inspects nearly every item before delivery. We check condition, authenticity, and compliance to protect buyers and sellers.",
+          reliableDelivery: "Reliable Delivery",
+          deliveryDesc:
+            "Delivery managed by Vani ensures your packages arrive safely and on time. Professional handling, real-time tracking, and accountability at every step.",
+
+          // Trust Section
+          trustTitle: "Built on Trust",
+          trustSubtitle:
+            "In a market where trust can be hard to find, VANI sets a new standard for reliable online commerce.",
+          trustDesc:
+            "Every transaction on VANI is protected by our complete verification process. We believe trust is earned through consistent actions—that's why we personally check products, manage deliveries, and guarantee every purchase. Currently available in Kinshasa, with plans to expand nationwide.",
+          verificationRate: "Verification Rate",
+          managedDelivery: "Managed Delivery",
+          customerSupport: "Customer Support",
+
+          // How It Works Section
+          howTitle: "How VANI Works",
+          howSubtitle:
+            "A simple and secure process designed for the Kinshasa market.",
+          step1Title: "List Your Product",
+          step1Desc:
+            "Create a detailed listing with photos and description. Set your price and reach thousands of potential buyers.",
+          step2Title: "We Verify Everything",
+          step2Desc:
+            "Our quality team reviews listings and inspects products to ensure accuracy and condition meet our standards.",
+          step3Title: "Secure Transaction",
+          step3Desc:
+            "Buyers pay through our secure platform. Funds are held safely until delivery is confirmed.",
+          step4Title: "Managed Delivery",
+          step4Desc:
+            "Our professional delivery team handles pickup and delivery with care, ensuring items arrive in perfect condition.",
+
+          // CTA Section
+          ctaTitle: "Ready to Get Started?",
+          ctaSubtitle:
+            "Join thousands of buyers and sellers already using VANI to unlock the value of everyday items.",
+          ctaButton: "Access the Marketplace",
+          contactTeam: "Contact Our Team",
+
+          // Footer
+          footerTagline: "Building trusted commerce for Kinshasa.",
+          footerDesc:
+            "Vani is a technology company building the infrastructure for reliable, verified e-commerce in the Democratic Republic of Congo.",
+          navigation: "Navigation",
+          legal: "Legal",
+          privacy: "Privacy Policy",
+          terms: "Terms of Use",
+          copyright: "© 2026 Vani. All rights reserved.",
+        },
+      };
+
+      // Initialize with saved language or default to French
+      let currentLang = localStorage.getItem("vani-lang") || "fr";
+
+      function updateTranslations(lang) {
+        // Update all elements with data-i18n attribute
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+          }
+        });
+
+        // Update language switcher labels
+        const langLabel = document.getElementById("lang-label");
+        const langLabelFooter = document.getElementById("lang-label-footer");
+        if (langLabel) langLabel.textContent = translations[lang].langLabel;
+        if (langLabelFooter)
+          langLabelFooter.textContent = translations[lang].langLabel;
+
+        // Update dropdown items
+        const langFr = document.querySelector(
+          '#lang-dropdown [data-lang="fr"]'
+        );
+        const langEn = document.querySelector(
+          '#lang-dropdown [data-lang="en"]'
+        );
+        const langFrFooter = document.querySelector(
+          '#lang-dropdown-footer [data-lang="fr"]'
+        );
+        const langEnFooter = document.querySelector(
+          '#lang-dropdown-footer [data-lang="en"]'
+        );
+
+        if (langFr) langFr.textContent = translations[lang].langFr;
+        if (langEn) langEn.textContent = translations[lang].langEn;
+        if (langFrFooter) langFrFooter.textContent = translations[lang].langFr;
+        if (langEnFooter) langEnFooter.textContent = translations[lang].langEn;
+
+        // Update html lang attribute
+        document.documentElement.lang = lang;
+
+        // Save language preference
+        localStorage.setItem("vani-lang", lang);
+        currentLang = lang;
+      }
+
+      function setupLanguageSwitchers() {
+        // Main navbar switcher
+        const langBtn = document.getElementById("lang-btn");
+        const langDropdown = document.getElementById("lang-dropdown");
+
+        if (langBtn && langDropdown) {
+          langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            langDropdown.classList.toggle("hidden");
+          });
+
+          document
+            .querySelectorAll("#lang-dropdown [data-lang]")
+            .forEach((btn) => {
+              btn.addEventListener("click", function () {
+                const newLang = this.getAttribute("data-lang");
+                updateTranslations(newLang);
+                langDropdown.classList.add("hidden");
+              });
+            });
+        }
+
+        // Footer switcher
+        const langBtnFooter = document.getElementById("lang-btn-footer");
+        const langDropdownFooter = document.getElementById(
+          "lang-dropdown-footer"
+        );
+
+        if (langBtnFooter && langDropdownFooter) {
+          langBtnFooter.addEventListener("click", function (e) {
+            e.stopPropagation();
+            langDropdownFooter.classList.toggle("hidden");
+          });
+
+          document
+            .querySelectorAll("#lang-dropdown-footer [data-lang]")
+            .forEach((btn) => {
+              btn.addEventListener("click", function () {
+                const newLang = this.getAttribute("data-lang");
+                updateTranslations(newLang);
+                langDropdownFooter.classList.add("hidden");
+              });
+            });
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", function (e) {
+          if (
+            langBtn &&
+            langDropdown &&
+            !langBtn.contains(e.target) &&
+            !langDropdown.contains(e.target)
+          ) {
+            langDropdown.classList.add("hidden");
+          }
+          if (
+            langBtnFooter &&
+            langDropdownFooter &&
+            !langBtnFooter.contains(e.target) &&
+            !langDropdownFooter.contains(e.target)
+          ) {
+            langDropdownFooter.classList.add("hidden");
+          }
+        });
+      }
+
+      // Initialize when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        setupLanguageSwitchers();
+        updateTranslations(currentLang);
+      });
+    </script>
+
+    <script
+      crossorigin=""
+      src="./assets/index-CJI2c-gj.js"
+      type="module"
+    ></script>
+    <link href="./assets/index-DNPEQDhc.css" rel="stylesheet" />
+
+    <!-- SEO Meta Tags -->
+    <meta content="Vani Marketplace" property="og:title" />
+    <meta
+      content="Vani is a technology company building VANI, a trusted e-commerce marketplace for the Kinshasa market, enabling individuals and businesses to sell new and second-hand products securely with high-quality verification and delivery services."
+      property="og:description"
+    />
+
+    <meta content="website" property="og:type" />
+    <meta content="Vani Marketplace" property="og:site_name" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Vani Marketplace" name="twitter:title" />
+    <meta
+      content="Vani is a technology company building VANI, a trusted e-commerce marketplace for the Kinshasa market, enabling individuals and businesses to sell new and second-hand products securely with high-quality verification and delivery services."
+      name="twitter:description"
+    />
+
+    <style>
+      @keyframes badge-spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .badge-spinner {
+        animation: badge-spin 1s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="min-h-screen flex flex-col bg-white">
+        <!-- Navigation -->
+        <nav
+          class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+              <a class="flex items-center" href="index.html">
+                <span
+                  class="text-2xl font-bold tracking-tight transition-colors text-slate-900"
+                  data-i18n="vani"
+                  >Vani</span
+                >
+              </a>
+              <div class="hidden lg:flex items-center gap-1">
+                <a
+                  class="px-4 py-2 text-sm font-medium rounded-lg transition-all text-cyan-600 bg-cyan-50"
+                  href="index.html"
+                  data-i18n="home"
+                  >Accueil</a
+                >
+                <a
+                  class="px-4 py-2 text-sm font-medium rounded-lg transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                  href="product.html"
+                  data-i18n="product"
+                  >Produit</a
+                >
+                <a
+                  class="px-4 py-2 text-sm font-medium rounded-lg transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                  href="aprorpos.html"
+                  data-i18n="about"
+                  >À Propos</a
+                >
+                <a
+                  class="px-4 py-2 text-sm font-medium rounded-lg transition-all text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                  href="contact.html"
+                  data-i18n="contact"
+                  >Contact</a
+                >
+              </div>
+              <div class="hidden lg:flex items-center gap-3">
+                <!-- Language Switcher -->
+                <div id="lang-switcher" class="relative">
+                  <button
+                    id="lang-btn"
+                    class="justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border bg-background shadow-sm hover:text-accent-foreground h-8 rounded-md px-3 text-xs flex items-center gap-2 font-medium border-slate-200 hover:bg-slate-50"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-globe h-4 w-4"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path
+                        d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
+                      ></path>
+                      <path d="M2 12h20"></path>
+                    </svg>
+                    <span id="lang-label">🇫🇷 FR</span>
+                  </button>
+                  <div
+                    id="lang-dropdown"
+                    class="hidden absolute right-0 mt-2 w-28 bg-white border border-slate-200 rounded shadow-lg z-50"
+                  >
+                    <button
+                      class="w-full text-left px-4 py-2 hover:bg-slate-100"
+                      data-lang="fr"
+                    >
+                      🇫🇷 Français
+                    </button>
+                    <button
+                      class="w-full text-left px-4 py-2 hover:bg-slate-100"
+                      data-lang="en"
+                    >
+                      🇬🇧 English
+                    </button>
+                  </div>
+                </div>
+                <a
+                  href="https://www.vaniofficiel.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-9 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg px-5"
+                >
+                  <span data-i18n="start">Commencer</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-right ml-2 h-4 w-4"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+              <button
+                class="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-menu h-6 w-6 text-slate-900"
+                >
+                  <line x1="4" x2="20" y1="12" y2="12"></line>
+                  <line x1="4" x2="20" y1="6" y2="6"></line>
+                  <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+          <!-- Hero Section -->
+          <section
+            class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-cyan-50/30"
+          >
+            <div class="absolute inset-0 overflow-hidden">
+              <div
+                class="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-cyan-100/40 to-slate-100/40 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3"
+              ></div>
+              <div
+                class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-slate-100/50 to-cyan-100/30 rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/3"
+              ></div>
+            </div>
+            <div
+              class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:pt-32 lg:pb-24"
+            >
+              <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div style="opacity: 1; transform: none">
+                  <span
+                    class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-100 text-cyan-700 mb-6"
+                    data-i18n="future"
+                    >L'Avenir du Commerce à Kinshasa</span
+                  >
+                  <h1
+                    class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight"
+                    data-i18n="headline"
+                  >
+                    Transformez Vos Objets en Valeur Réelle
+                  </h1>
+                  <p
+                    class="mt-6 text-lg lg:text-xl text-slate-600 leading-relaxed max-w-xl"
+                    data-i18n="subheadline"
+                  >
+                    VANI est une marketplace e-commerce de confiance où
+                    particuliers et entreprises vendent des produits neufs et
+                    d'occasion en toute sérénité.
+                  </p>
+                  <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                    <a
+                      href="https://www.vaniofficiel.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 bg-slate-900 hover:bg-slate-800 text-white rounded-xl px-8 py-6 text-base font-medium shadow-lg shadow-slate-900/10"
+                    >
+                      <span data-i18n="explore">Explorer la Marketplace</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-right ml-2 h-5 w-5"
+                      >
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    <a
+                      class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background shadow-sm hover:text-accent-foreground h-10 rounded-xl px-8 py-6 text-base font-medium border-slate-200 hover:bg-slate-50"
+                      href="/Product"
+                    >
+                      <span data-i18n="learn">En Savoir Plus</span>
+                    </a>
+                  </div>
+                  <div class="mt-12 flex flex-wrap gap-6">
+                    <div class="flex items-center gap-2 text-slate-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-shield h-5 w-5 text-cyan-600"
+                      >
+                        <path
+                          d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                        ></path>
+                      </svg>
+                      <span class="text-sm font-medium" data-i18n="verified"
+                        >99% Verified</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-truck h-5 w-5 text-cyan-600"
+                      >
+                        <path
+                          d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"
+                        ></path>
+                        <path d="M15 18H9"></path>
+                        <path
+                          d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"
+                        ></path>
+                        <circle cx="17" cy="18" r="2"></circle>
+                        <circle cx="7" cy="18" r="2"></circle>
+                      </svg>
+                      <span class="text-sm font-medium" data-i18n="delivery"
+                        >Managed Delivery</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-circle-check-big h-5 w-5 text-cyan-600"
+                      >
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <span class="text-sm font-medium" data-i18n="quality"
+                        >Quality Guaranteed</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="relative hidden lg:block"
+                  style="opacity: 1; transform: none"
+                >
+                  <div class="relative">
+                    <div
+                      class="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/10"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&amp;h=600&amp;fit=crop"
+                        alt="E-commerce marketplace"
+                        class="w-full h-[500px] object-cover"
+                      />
+                      <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"
+                      ></div>
+                    </div>
+                    <div
+                      class="absolute -left-8 top-1/4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3"
+                      style="opacity: 1; transform: none"
+                    >
+                      <div
+                        class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-circle-check-big h-6 w-6 text-green-600"
+                        >
+                          <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                          <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <p
+                          class="text-sm font-semibold text-slate-900"
+                          data-i18n="verified"
+                        >
+                          Verified
+                        </p>
+                        <p
+                          class="text-xs text-slate-500"
+                          data-i18n="qualityChecked"
+                        >
+                          Quality Checked
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute -right-4 bottom-1/4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3"
+                      style="opacity: 1; transform: none"
+                    >
+                      <div
+                        class="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-truck h-6 w-6 text-cyan-600"
+                        >
+                          <path
+                            d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"
+                          ></path>
+                          <path d="M15 18H9"></path>
+                          <path
+                            d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"
+                          ></path>
+                          <circle cx="17" cy="18" r="2"></circle>
+                          <circle cx="7" cy="18" r="2"></circle>
+                        </svg>
+                      </div>
+                      <div>
+                        <p
+                          class="text-sm font-semibold text-slate-900"
+                          data-i18n="delivery"
+                        >
+                          Delivered
+                        </p>
+                        <p class="text-xs text-slate-500">Safe &amp; On Time</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Why Choose VANI Section -->
+          <section class="py-20 lg:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                <h2
+                  class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight"
+                  style="opacity: 1; transform: none"
+                  data-i18n="whyTitle"
+                >
+                  Pourquoi Choisir VANI
+                </h2>
+                <p
+                  class="mt-4 text-lg lg:text-xl text-slate-600"
+                  style="opacity: 1; transform: none"
+                  data-i18n="whySubtitle"
+                >
+                  Nous avons créé une marketplace qui privilégie la confiance,
+                  la qualité et l'accessibilité pour tous à Kinshasa.
+                </p>
+              </div>
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div
+                  class="group p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl hover:shadow-slate-100 transition-all duration-300 border border-transparent hover:border-slate-100"
+                  style="opacity: 1; transform: none"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-cyan-100 text-cyan-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-shopping-bag h-7 w-7"
+                    >
+                      <path
+                        d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"
+                      ></path>
+                      <path d="M3 6h18"></path>
+                      <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                  </div>
+                  <h3
+                    class="text-xl font-semibold text-slate-900 mb-3"
+                    data-i18n="sellAnything"
+                  >
+                    Vendez Tout
+                  </h3>
+                  <p
+                    class="text-slate-600 leading-relaxed"
+                    data-i18n="sellDesc"
+                  >
+                    Transformez les objets dont vous n'avez plus besoin en
+                    revenus réels. Que ce soient des produits neufs ou des
+                    articles d'occasion de qualité.
+                  </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                  class="group p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl hover:shadow-slate-100 transition-all duration-300 border border-transparent hover:border-slate-100"
+                  style="opacity: 1; transform: none"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-shield-check h-7 w-7"
+                    >
+                      <path
+                        d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                      ></path>
+                      <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                  </div>
+                  <h3
+                    class="text-xl font-semibold text-slate-900 mb-3"
+                    data-i18n="buyConfidence"
+                  >
+                    Achetez en Confiance
+                  </h3>
+                  <p class="text-slate-600 leading-relaxed" data-i18n="buyDesc">
+                    Chaque produit listé sur VANI fait l'objet d'une
+                    vérification stricte. Notre taux d'inspection de 99%
+                    garantit que vous recevez exactement ce que vous avez
+                    commandé.
+                  </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                  class="group p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl hover:shadow-slate-100 transition-all duration-300 border border-transparent hover:border-slate-100"
+                  style="opacity: 1; transform: none"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-violet-100 text-violet-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-badge-check h-7 w-7"
+                    >
+                      <path
+                        d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
+                      ></path>
+                      <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                  </div>
+                  <h3
+                    class="text-xl font-semibold text-slate-900 mb-3"
+                    data-i18n="verifiedQuality"
+                  >
+                    Qualité Vérifiée
+                  </h3>
+                  <p
+                    class="text-slate-600 leading-relaxed"
+                    data-i18n="qualityDesc"
+                  >
+                    Notre équipe dédiée au contrôle qualité inspecte presque
+                    chaque article avant livraison. Nous vérifions l'état,
+                    l'authenticité et la conformité.
+                  </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div
+                  class="group p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl hover:shadow-slate-100 transition-all duration-300 border border-transparent hover:border-slate-100"
+                  style="opacity: 1; transform: none"
+                >
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-truck h-7 w-7"
+                    >
+                      <path
+                        d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"
+                      ></path>
+                      <path d="M15 18H9"></path>
+                      <path
+                        d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"
+                      ></path>
+                      <circle cx="17" cy="18" r="2"></circle>
+                      <circle cx="7" cy="18" r="2"></circle>
+                    </svg>
+                  </div>
+                  <h3
+                    class="text-xl font-semibold text-slate-900 mb-3"
+                    data-i18n="reliableDelivery"
+                  >
+                    Livraison Fiable
+                  </h3>
+                  <p
+                    class="text-slate-600 leading-relaxed"
+                    data-i18n="deliveryDesc"
+                  >
+                    La livraison gérée par Vani garantit que vos colis arrivent
+                    en toute sécurité et à temps. Manipulation professionnelle,
+                    suivi en temps réel.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Trust Section -->
+          <section class="py-20 lg:py-28 bg-slate-900 relative overflow-hidden">
+            <div class="absolute inset-0">
+              <div
+                class="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"
+              ></div>
+              <div
+                class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-700/50 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"
+              ></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                  <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight"
+                    style="opacity: 1; transform: none"
+                    data-i18n="trustTitle"
+                  >
+                    Fondé sur la Confiance
+                  </h2>
+                  <p
+                    class="mt-4 text-lg text-slate-400"
+                    style="opacity: 1; transform: none"
+                    data-i18n="trustSubtitle"
+                  >
+                    Dans un marché où la confiance peut être difficile à
+                    trouver, VANI établit une nouvelle norme pour le commerce en
+                    ligne fiable.
+                  </p>
+                  <p
+                    class="mt-6 text-slate-300 leading-relaxed"
+                    style="opacity: 1; transform: none"
+                    data-i18n="trustDesc"
+                  >
+                    Chaque transaction sur VANI est protégée par notre processus
+                    de vérification complet. Nous croyons que la confiance se
+                    mérite par des actions constantes.
+                  </p>
+                </div>
+                <div class="grid grid-cols-3 gap-6">
+                  <div
+                    class="text-center p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50"
+                    style="opacity: 1; transform: none"
+                  >
+                    <span
+                      class="block text-3xl lg:text-4xl font-bold text-cyan-400"
+                      >99%</span
+                    >
+                    <span
+                      class="block mt-2 text-sm text-slate-400"
+                      data-i18n="verificationRate"
+                      >Taux de Vérification</span
+                    >
+                  </div>
+                  <div
+                    class="text-center p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50"
+                    style="opacity: 1; transform: none"
+                  >
+                    <span
+                      class="block text-3xl lg:text-4xl font-bold text-cyan-400"
+                      >100%</span
+                    >
+                    <span
+                      class="block mt-2 text-sm text-slate-400"
+                      data-i18n="managedDelivery"
+                      >Livraison Gérée</span
+                    >
+                  </div>
+                  <div
+                    class="text-center p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50"
+                    style="opacity: 1; transform: none"
+                  >
+                    <span
+                      class="block text-3xl lg:text-4xl font-bold text-cyan-400"
+                      >24/7</span
+                    >
+                    <span
+                      class="block mt-2 text-sm text-slate-400"
+                      data-i18n="customerSupport"
+                      >Support Client</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- How It Works Section -->
+          <section
+            class="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50"
+          >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                <h2
+                  class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight"
+                  style="opacity: 1; transform: none"
+                  data-i18n="howTitle"
+                >
+                  Comment Fonctionne VANI
+                </h2>
+                <p
+                  class="mt-4 text-lg lg:text-xl text-slate-600"
+                  style="opacity: 1; transform: none"
+                  data-i18n="howSubtitle"
+                >
+                  Un processus simple et sécurisé conçu pour le marché de
+                  Kinshasa.
+                </p>
+              </div>
+              <div class="relative">
+                <div
+                  class="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-slate-200"
+                ></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+                  <!-- Step 1 -->
+                  <div
+                    class="relative text-center"
+                    style="opacity: 1; transform: none"
+                  >
+                    <div class="relative inline-flex flex-col items-center">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-cyan-500 text-white flex items-center justify-center shadow-lg relative z-10"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-clipboard-list h-8 w-8"
+                        >
+                          <rect
+                            width="8"
+                            height="4"
+                            x="8"
+                            y="2"
+                            rx="1"
+                            ry="1"
+                          ></rect>
+                          <path
+                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                          ></path>
+                          <path d="M12 11h4"></path>
+                          <path d="M12 16h4"></path>
+                          <path d="M8 11h.01"></path>
+                          <path d="M8 16h.01"></path>
+                        </svg>
+                      </div>
+                      <span
+                        class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-slate-900 text-white text-sm font-bold flex items-center justify-center z-20"
+                        >1</span
+                      >
+                    </div>
+                    <h3
+                      class="mt-6 text-xl font-semibold text-slate-900"
+                      data-i18n="step1Title"
+                    >
+                      Publiez Votre Produit
+                    </h3>
+                    <p
+                      class="mt-3 text-slate-600 leading-relaxed max-w-xs mx-auto"
+                      data-i18n="step1Desc"
+                    >
+                      Créez une annonce détaillée avec photos et description.
+                      Fixez votre prix et atteignez des milliers d'acheteurs
+                      potentiels.
+                    </p>
+                  </div>
+
+                  <!-- Step 2 -->
+                  <div
+                    class="relative text-center"
+                    style="opacity: 1; transform: none"
+                  >
+                    <div class="relative inline-flex flex-col items-center">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-violet-500 text-white flex items-center justify-center shadow-lg relative z-10"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-search h-8 w-8"
+                        >
+                          <circle cx="11" cy="11" r="8"></circle>
+                          <path d="m21 21-4.3-4.3"></path>
+                        </svg>
+                      </div>
+                      <span
+                        class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-slate-900 text-white text-sm font-bold flex items-center justify-center z-20"
+                        >2</span
+                      >
+                    </div>
+                    <h3
+                      class="mt-6 text-xl font-semibold text-slate-900"
+                      data-i18n="step2Title"
+                    >
+                      Nous Vérifions Tout
+                    </h3>
+                    <p
+                      class="mt-3 text-slate-600 leading-relaxed max-w-xs mx-auto"
+                      data-i18n="step2Desc"
+                    >
+                      Notre équipe qualité examine les annonces et inspecte les
+                      produits pour s'assurer que la précision et l'état
+                      correspondent à nos standards.
+                    </p>
+                  </div>
+
+                  <!-- Step 3 -->
+                  <div
+                    class="relative text-center"
+                    style="opacity: 1; transform: none"
+                  >
+                    <div class="relative inline-flex flex-col items-center">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-lg relative z-10"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-credit-card h-8 w-8"
+                        >
+                          <rect
+                            width="20"
+                            height="14"
+                            x="2"
+                            y="5"
+                            rx="2"
+                          ></rect>
+                          <line x1="2" x2="22" y1="10" y2="10"></line>
+                        </svg>
+                      </div>
+                      <span
+                        class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-slate-900 text-white text-sm font-bold flex items-center justify-center z-20"
+                        >3</span
+                      >
+                    </div>
+                    <h3
+                      class="mt-6 text-xl font-semibold text-slate-900"
+                      data-i18n="step3Title"
+                    >
+                      Transaction Sécurisée
+                    </h3>
+                    <p
+                      class="mt-3 text-slate-600 leading-relaxed max-w-xs mx-auto"
+                      data-i18n="step3Desc"
+                    >
+                      Les acheteurs paient via notre plateforme sécurisée. Les
+                      fonds sont conservés en sécurité jusqu'à confirmation de
+                      la livraison.
+                    </p>
+                  </div>
+
+                  <!-- Step 4 -->
+                  <div
+                    class="relative text-center"
+                    style="opacity: 1; transform: none"
+                  >
+                    <div class="relative inline-flex flex-col items-center">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-amber-500 text-white flex items-center justify-center shadow-lg relative z-10"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-package h-8 w-8"
+                        >
+                          <path
+                            d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+                          ></path>
+                          <path d="M12 22V12"></path>
+                          <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                          <path d="m7.5 4.27 9 5.15"></path>
+                        </svg>
+                      </div>
+                      <span
+                        class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-slate-900 text-white text-sm font-bold flex items-center justify-center z-20"
+                        >4</span
+                      >
+                    </div>
+                    <h3
+                      class="mt-6 text-xl font-semibold text-slate-900"
+                      data-i18n="step4Title"
+                    >
+                      Livraison Gérée
+                    </h3>
+                    <p
+                      class="mt-3 text-slate-600 leading-relaxed max-w-xs mx-auto"
+                      data-i18n="step4Desc"
+                    >
+                      Notre équipe de livraison professionnelle gère la collecte
+                      et la livraison avec soin, garantissant que les articles
+                      arrivent en parfait état.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA Section -->
+          <section class="py-20 lg:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div
+                class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-12 lg:p-20"
+                style="opacity: 1; transform: none"
+              >
+                <div class="absolute inset-0 overflow-hidden">
+                  <div
+                    class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 w-80 h-80 bg-violet-500/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"
+                  ></div>
+                </div>
+                <div class="relative text-center max-w-3xl mx-auto">
+                  <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight"
+                    data-i18n="ctaTitle"
+                  >
+                    Prêt à Commencer ?
+                  </h2>
+                  <p
+                    class="mt-6 text-lg lg:text-xl text-slate-300"
+                    data-i18n="ctaSubtitle"
+                  >
+                    Rejoignez des milliers d'acheteurs et vendeurs qui utilisent
+                    déjà VANI pour libérer la valeur des objets du quotidien.
+                  </p>
+                  <div
+                    class="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+                  >
+                    <a
+                      href="https://www.vaniofficiel.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 bg-white text-slate-900 hover:bg-slate-100 rounded-xl px-8 py-6 text-base font-medium shadow-lg"
+                    >
+                      <span data-i18n="ctaButton"
+                        >Accéder à la Marketplace</span
+                      >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-right ml-2 h-5 w-5"
+                      >
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    <a
+                      class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background shadow-sm hover:text-accent-foreground h-10 border-slate-600 text-white hover:bg-slate-800 rounded-xl px-8 py-6 text-base font-medium"
+                      href="contact.html"
+                    >
+                      <span data-i18n="contactTeam"
+                        >Contacter Notre Équipe</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-white">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8"
+            >
+              <div class="lg:col-span-2">
+                <a class="inline-block" href="index.html">
+                  <span
+                    class="text-3xl font-bold tracking-tight"
+                    data-i18n="vani"
+                    >Vani</span
+                  >
+                </a>
+                <p
+                  class="mt-2 text-lg text-cyan-400 font-medium"
+                  data-i18n="footerTagline"
+                >
+                  Construire un commerce de confiance pour Kinshasa.
+                </p>
+                <p
+                  class="mt-4 text-slate-400 max-w-md leading-relaxed"
+                  data-i18n="footerDesc"
+                >
+                  Vani est une entreprise technologique créant l'infrastructure
+                  pour un e-commerce fiable et vérifié en République
+                  Démocratique du Congo.
+                </p>
+                <div class="mt-6">
+                  <div id="lang-switcher-footer" class="relative inline-block">
+                    <button
+                      id="lang-btn-footer"
+                      class="justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-8 rounded-md px-3 text-xs flex items-center gap-2 font-medium text-slate-400 hover:text-white hover:bg-slate-800"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-globe h-4 w-4"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path
+                          d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
+                        ></path>
+                        <path d="M2 12h20"></path>
+                      </svg>
+                      <span id="lang-label-footer">🇫🇷 FR</span>
+                    </button>
+                    <div
+                      id="lang-dropdown-footer"
+                      class="hidden absolute left-0 mt-2 w-28 bg-white border border-slate-200 rounded shadow-lg z-50 text-slate-900"
+                    >
+                      <button
+                        class="w-full text-left px-4 py-2 hover:bg-slate-100"
+                        data-lang="fr"
+                      >
+                        🇫🇷 Français
+                      </button>
+                      <button
+                        class="w-full text-left px-4 py-2 hover:bg-slate-100"
+                        data-lang="en"
+                      >
+                        🇬🇧 English
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4
+                  class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4"
+                  data-i18n="navigation"
+                >
+                  Navigation
+                </h4>
+                <ul class="space-y-3">
+                  <li>
+                    <a
+                      class="text-slate-300 hover:text-white transition-colors"
+                      href="index.html"
+                      data-i18n="home"
+                      >Accueil</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-slate-300 hover:text-white transition-colors"
+                      href="product.html"
+                      data-i18n="product"
+                      >Produit</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-slate-300 hover:text-white transition-colors"
+                      href="aprorpos.html"
+                      data-i18n="about"
+                      >À Propos</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-slate-300 hover:text-white transition-colors"
+                      href="contact.html"
+                      data-i18n="contact"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4
+                  class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4"
+                  data-i18n="legal"
+                >
+                  Légal
+                </h4>
+                <ul class="space-y-3">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-slate-300 hover:text-white transition-colors"
+                      data-i18n="privacy"
+                      >Politique de Confidentialité</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-slate-300 hover:text-white transition-colors"
+                      data-i18n="terms"
+                      >Conditions d'Utilisation</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-slate-800">
+              <p
+                class="text-center text-slate-500 text-sm"
+                data-i18n="copyright"
+              >
+                © 2026 Vani. Tous droits réservés.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

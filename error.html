@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Page Introuvable | Vani Marketplace</title>
+
+    <!-- Translation Script -->
+    <script>
+      const translations = {
+        fr: {
+          errorTitle: "Page Introuvable",
+          errorSubtitle:
+            "Il semble que la page que vous recherchez n'existe pas ou a été déplacée.",
+          errorMessage:
+            "Vous pouvez retourner à la page d'accueil ou explorer notre marketplace pour trouver ce que vous cherchez.",
+          backHome: "Retour à l'accueil",
+          exploreMarketplace: "Explorer la Marketplace",
+          contactSupport: "Contacter le support",
+          errorCode: "Erreur 404",
+          notFound: "Ressource non trouvée",
+        },
+        en: {
+          errorTitle: "Page Not Found",
+          errorSubtitle:
+            "It seems the page you're looking for doesn't exist or has been moved.",
+          errorMessage:
+            "You can return to the homepage or explore our marketplace to find what you're looking for.",
+          backHome: "Back to Home",
+          exploreMarketplace: "Explore Marketplace",
+          contactSupport: "Contact Support",
+          errorCode: "Error 404",
+          notFound: "Resource not found",
+        },
+      };
+
+      // Initialize with saved language or default to French
+      let currentLang = localStorage.getItem("vani-lang") || "fr";
+
+      function updateTranslations(lang) {
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+          }
+        });
+
+        // Update html lang attribute
+        document.documentElement.lang = lang;
+
+        // Save language preference
+        localStorage.setItem("vani-lang", lang);
+        currentLang = lang;
+      }
+
+      // Initialize when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        updateTranslations(currentLang);
+      });
+    </script>
+
+    <!-- Styles -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+        min-height: 100vh;
+        color: #0f172a;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .error-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .error-background {
+        position: absolute;
+        inset: 0;
+      }
+
+      .error-background .gradient-1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 800px;
+        height: 800px;
+        background: linear-gradient(
+          135deg,
+          rgba(6, 182, 212, 0.1) 0%,
+          rgba(226, 232, 240, 0.2) 100%
+        );
+        border-radius: 50%;
+        filter: blur(60px);
+        transform: translate(30%, -30%);
+      }
+
+      .error-background .gradient-2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 600px;
+        height: 600px;
+        background: linear-gradient(
+          45deg,
+          rgba(226, 232, 240, 0.3) 0%,
+          rgba(6, 182, 212, 0.1) 100%
+        );
+        border-radius: 50%;
+        filter: blur(60px);
+        transform: translate(-30%, 30%);
+      }
+
+      .error-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .error-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        background: linear-gradient(135deg, #06b6d4, #0891b2);
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
+      }
+
+      .error-number {
+        font-size: 8rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #0f172a, #475569);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+
+      .error-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 1rem;
+      }
+
+      .error-subtitle {
+        font-size: 1.25rem;
+        color: #475569;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .error-message {
+        font-size: 1rem;
+        color: #64748b;
+        margin-bottom: 3rem;
+        line-height: 1.6;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .error-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+
+      .btn {
+        padding: 1rem 2rem;
+        border-radius: 0.75rem;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-primary {
+        background: #0f172a;
+        color: white;
+        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.1);
+      }
+
+      .btn-primary:hover {
+        background: #1e293b;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 25px rgba(15, 23, 42, 0.15);
+      }
+
+      .btn-secondary {
+        background: white;
+        color: #0f172a;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+      }
+
+      .btn-secondary:hover {
+        background: #f8fafc;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(15, 23, 42, 0.1);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: #0f172a;
+        border: 1px solid #cbd5e1;
+      }
+
+      .btn-outline:hover {
+        background: #f1f5f9;
+        border-color: #94a3b8;
+      }
+
+      .error-icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 2rem;
+        position: relative;
+      }
+
+      .error-icon-circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          rgba(6, 182, 212, 0.1),
+          rgba(99, 102, 241, 0.1)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .error-icon-circle::before {
+        content: "";
+        position: absolute;
+        inset: -8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+        z-index: -1;
+        opacity: 0.2;
+        filter: blur(10px);
+      }
+
+      .error-icon-svg {
+        width: 60px;
+        height: 60px;
+        color: #06b6d4;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      .footer-link {
+        color: #64748b;
+        text-decoration: none;
+        font-size: 0.875rem;
+        transition: color 0.2s ease;
+      }
+
+      .footer-link:hover {
+        color: #06b6d4;
+      }
+
+      .language-switcher {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      }
+
+      .lang-btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background: white;
+        border: 1px solid #e2e8f0;
+        color: #475569;
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .lang-btn:hover {
+        background: #f8fafc;
+        border-color: #cbd5e1;
+      }
+
+      @media (max-width: 768px) {
+        .error-number {
+          font-size: 6rem;
+        }
+
+        .error-title {
+          font-size: 2.25rem;
+        }
+
+        .error-subtitle {
+          font-size: 1.125rem;
+        }
+
+        .error-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .language-switcher {
+          position: static;
+          margin-top: 2rem;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <div class="error-background">
+        <div class="gradient-1"></div>
+        <div class="gradient-2"></div>
+      </div>
+
+      <div class="language-switcher">
+        <button class="lang-btn" onclick="toggleLanguage()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+            <path d="M2 12h20"></path>
+          </svg>
+          <span id="lang-label">🇫🇷 FR</span>
+        </button>
+      </div>
+
+      <div class="error-content">
+        <div class="error-icon">
+          <div class="error-icon-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="error-icon-svg"
+            >
+              <path
+                d="M21.2 15c.7-1.2 1-2.5.7-3.9-.5-2-1.9-3.5-3.8-4.4-1.5-.7-3.3-.8-5-.3-1.6.4-3 1.4-3.9 2.8"
+              />
+              <path
+                d="M14.8 10c-.2-1.5.3-3 1.3-4.1 1.5-1.6 3.9-2.1 5.9-1.2 1.3.6 2.3 1.8 2.7 3.2.5 1.5.2 3.1-.7 4.4"
+              />
+              <path d="m3.4 21 9.6-9.6" />
+              <path d="M4.8 15.2l6.4 6.4" />
+              <path d="M2 14.8 8.8 8" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="error-badge" data-i18n="errorCode">Erreur 404</div>
+
+        <h1 class="error-number">404</h1>
+
+        <h2 class="error-title" data-i18n="errorTitle">Page Introuvable</h2>
+
+        <p class="error-subtitle" data-i18n="errorSubtitle">
+          Il semble que la page que vous recherchez n'existe pas ou a été
+          déplacée.
+        </p>
+
+        <p class="error-message" data-i18n="errorMessage">
+          Vous pouvez retourner à la page d'accueil ou explorer notre
+          marketplace pour trouver ce que vous cherchez.
+        </p>
+
+        <div class="error-actions">
+          <a href="index.html" class="btn btn-primary" data-i18n="backHome">
+            Retour à l'accueil
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </a>
+
+          <a
+            href="https://www.vaniofficiel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+            data-i18n="exploreMarketplace"
+          >
+            Explorer la Marketplace
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+
+          <a
+            href="contact.html"
+            class="btn btn-outline"
+            data-i18n="contactSupport"
+          >
+            Contacter le support
+          </a>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html" class="footer-link" data-i18n="home">Accueil</a>
+          <a href="product.html" class="footer-link" data-i18n="product"
+            >Produit</a
+          >
+          <a href="aprorpos.html" class="footer-link" data-i18n="about"
+            >À Propos</a
+          >
+          <a href="contact.html" class="footer-link" data-i18n="contact"
+            >Contact</a
+          >
+          <a href="#" class="footer-link" data-i18n="privacy"
+            >Politique de Confidentialité</a
+          >
+          <a href="#" class="footer-link" data-i18n="terms"
+            >Conditions d'Utilisation</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Language toggle function
+      function toggleLanguage() {
+        const newLang = currentLang === "fr" ? "en" : "fr";
+        updateTranslations(newLang);
+
+        // Update language button label
+        const langLabel = document.getElementById("lang-label");
+        if (newLang === "fr") {
+          langLabel.textContent = "🇫🇷 FR";
+        } else {
+          langLabel.textContent = "🇬🇧 EN";
+        }
+      }
+    </script>
+  </body>
+</html>
